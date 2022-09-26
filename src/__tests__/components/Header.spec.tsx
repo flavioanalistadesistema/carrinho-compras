@@ -28,6 +28,14 @@ jest.mock('../../hooks/useCart', () => {
           price: 139.9,
           title: 'Tênis VR Caminhada Confortável Detalhes Couro Masculino',
         },
+        {
+          amount: 3,
+          id: 3,
+          image:
+            'https://rocketseat-cdn.s3-sa-east-1.amazonaws.com/modulo-redux/tenis3.jpg',
+          price: 250.9,
+          title: 'Tênis VR Caminhada Confortável Detalhes Couro Masculino',
+        },
       ],
     }),
   };
@@ -38,6 +46,6 @@ describe('Header Component', () => {
     const { getByTestId } = render(<Header />);
 
     const cartSizeCounter = getByTestId('cart-size');
-    expect(cartSizeCounter).toHaveTextContent('2 itens');
+    expect(cartSizeCounter).toHaveTextContent('3 itens');
   });
 });
